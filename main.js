@@ -36,7 +36,7 @@ vypisText(poleJmen.length);
 // atd.
 
 poleJmen.forEach(function (ele, idx, arr) {
-    vypisText((idx + 1) + '. ' + ele)
+    vypisText((idx) + '. ' + ele)
 })
 
 
