@@ -1,3 +1,63 @@
+let testPole = [9, 8, 5, 6, 4];
+
+testPole[2];
+
+// vypíše nám počet hodnot v poli:
+testPole.length;
+
+// vypíše nám pole, které je na předposlením místě 
+testPole[testPole.length - 2];
+
+//připsání další hodnoty na konec pole:
+testPole.push(15);
+
+//odstranění poslední hodnoty z pole:
+testPole.pop();
+
+// přidání na začátek pole a odebrání ze začátku pole se to dělá pomocí shift a unshift
+testPole.shift(3);
+
+// vypíše nám to číslo pozice hodnoty 8 v poli
+let index = testPole.indexOf(8);
+
+
+//mazání hodnoty z určité pozice pole:
+//toto nám vymaže hodnotu na pozici č.1:
+testPole.splice(index, 1);
+
+// mazání od hodnoty č. a počet hodnot č.:
+//např. smaže nám to hodnoty od pozice č.1  a smaže to 2 hodnoty
+testPole.splice(1, 2);
+
+
+// vypíše nám to index + tečka + název hodnoty v poli
+let poleMest = ['Praha', 'Brno', 'Ostrava'];
+poleMest.forEach(function (ele, idx, arr) {
+    console.log(idx + '. ' + ele)
+});
+
+
+// když chci, aby mi to nevypisovalo od 0 ale od 1.místa
+let poleMest = ['Praha', 'Brno', 'Ostrava'];
+poleMest.forEach(function (ele, idx, arr) {
+    console.log((idx + 1) + '. ' + ele)
+});
+
+
+
+//druhá varianta, jak napsat funkci for each:
+let poleMest = ['Praha', 'Brno', 'Ostrava'];
+function vypisMestaSPoradim(ele, idx) {
+    console.log(idx + '. ' + ele)
+}
+
+poleMest.forEach(vypisMestaSPoradim);
+
+
+
+
+
+
 // Pro výpis do stránky můžeš použít funkci vypisText('text');
 // Její kód je přiložen na konci tohoto souboru.
 // Nebo můžeš pomocí console.log('text'); vypisovat do konzole prohlížeče.
